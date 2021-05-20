@@ -10,11 +10,17 @@ import SwiftUI
 @main
 struct OfflineApp: App {
     let persistenceController = PersistenceController.shared
+  
+    var serviceLocator: ServiceLocator {
+      let serviceLocator = ServiceLocator()
+      serviceLocator.register(NetworkService())
+      return serviceLocator
+    }
 
     var body: some Scene {
-        WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-        }
+      WindowGroup {
+        GifsFeedView(viewModel: TaskViewModel(locator: serviceLocator))
+          .environment(\.managedObjectContext, persistenceController.container.viewContext)
+      }
     }
 }

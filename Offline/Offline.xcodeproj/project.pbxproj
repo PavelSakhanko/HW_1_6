@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		4B0CD8432656486D00F2E05A /* OfflineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CD8422656486D00F2E05A /* OfflineApp.swift */; };
-		4B0CD8452656486D00F2E05A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CD8442656486D00F2E05A /* ContentView.swift */; };
 		4B0CD8472656486F00F2E05A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B0CD8462656486F00F2E05A /* Assets.xcassets */; };
 		4B0CD84A2656486F00F2E05A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B0CD8492656486F00F2E05A /* Preview Assets.xcassets */; };
 		4B0CD84C2656486F00F2E05A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CD84B2656486F00F2E05A /* Persistence.swift */; };
 		4B0CD84F2656486F00F2E05A /* Offline.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CD84D2656486F00F2E05A /* Offline.xcdatamodeld */; };
+		4B0CD85C26564C6900F2E05A /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CD85B26564C6900F2E05A /* ServiceLocator.swift */; };
+		4B0CD85E265650DA00F2E05A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CD85D265650DA00F2E05A /* NetworkService.swift */; };
+		4B0CD8652656536700F2E05A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CD8642656536700F2E05A /* Task.swift */; };
+		4B0CD86E2656543000F2E05A /* GifsFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CD86A2656543000F2E05A /* GifsFeedView.swift */; };
+		4B0CD872265657A400F2E05A /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CD871265657A400F2E05A /* TaskViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4B0CD83F2656486D00F2E05A /* Offline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Offline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B0CD8422656486D00F2E05A /* OfflineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineApp.swift; sourceTree = "<group>"; };
-		4B0CD8442656486D00F2E05A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4B0CD8462656486F00F2E05A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B0CD8492656486F00F2E05A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4B0CD84B2656486F00F2E05A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		4B0CD84E2656486F00F2E05A /* Offline.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Offline.xcdatamodel; sourceTree = "<group>"; };
 		4B0CD8502656486F00F2E05A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B0CD85B26564C6900F2E05A /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		4B0CD85D265650DA00F2E05A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		4B0CD8642656536700F2E05A /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		4B0CD86A2656543000F2E05A /* GifsFeedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifsFeedView.swift; sourceTree = "<group>"; };
+		4B0CD871265657A400F2E05A /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +65,12 @@
 			isa = PBXGroup;
 			children = (
 				4B0CD8562656489A00F2E05A /* App */,
+				4B0CD8632656533E00F2E05A /* Model */,
 				4B0CD858265648F700F2E05A /* View */,
+				4B0CD870265656BF00F2E05A /* ViewModel */,
+				4B0CD85A26564C3F00F2E05A /* Services */,
 				4B0CD8592656491000F2E05A /* Storage */,
+				4B0CD87726566EAB00F2E05A /* Extensions */,
 				4B0CD857265648AA00F2E05A /* Recources */,
 				4B0CD8482656486F00F2E05A /* Preview Content */,
 			);
@@ -93,7 +105,7 @@
 		4B0CD858265648F700F2E05A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4B0CD8442656486D00F2E05A /* ContentView.swift */,
+				4B0CD86A2656543000F2E05A /* GifsFeedView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -105,6 +117,38 @@
 				4B0CD84D2656486F00F2E05A /* Offline.xcdatamodeld */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		4B0CD85A26564C3F00F2E05A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4B0CD85B26564C6900F2E05A /* ServiceLocator.swift */,
+				4B0CD85D265650DA00F2E05A /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4B0CD8632656533E00F2E05A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4B0CD8642656536700F2E05A /* Task.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B0CD870265656BF00F2E05A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4B0CD871265657A400F2E05A /* TaskViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4B0CD87726566EAB00F2E05A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,9 +221,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B0CD84C2656486F00F2E05A /* Persistence.swift in Sources */,
-				4B0CD8452656486D00F2E05A /* ContentView.swift in Sources */,
+				4B0CD872265657A400F2E05A /* TaskViewModel.swift in Sources */,
+				4B0CD85C26564C6900F2E05A /* ServiceLocator.swift in Sources */,
+				4B0CD8652656536700F2E05A /* Task.swift in Sources */,
 				4B0CD8432656486D00F2E05A /* OfflineApp.swift in Sources */,
+				4B0CD85E265650DA00F2E05A /* NetworkService.swift in Sources */,
 				4B0CD84F2656486F00F2E05A /* Offline.xcdatamodeld in Sources */,
+				4B0CD86E2656543000F2E05A /* GifsFeedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
