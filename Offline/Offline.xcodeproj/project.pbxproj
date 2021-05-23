@@ -3,20 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4B0CD8432656486D00F2E05A /* OfflineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CD8422656486D00F2E05A /* OfflineApp.swift */; };
 		4B0CD8472656486F00F2E05A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B0CD8462656486F00F2E05A /* Assets.xcassets */; };
 		4B0CD84A2656486F00F2E05A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B0CD8492656486F00F2E05A /* Preview Assets.xcassets */; };
-		4B0CD84C2656486F00F2E05A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CD84B2656486F00F2E05A /* Persistence.swift */; };
 		4B0CD84F2656486F00F2E05A /* Offline.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CD84D2656486F00F2E05A /* Offline.xcdatamodeld */; };
 		4B0CD85C26564C6900F2E05A /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CD85B26564C6900F2E05A /* ServiceLocator.swift */; };
 		4B0CD85E265650DA00F2E05A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CD85D265650DA00F2E05A /* NetworkService.swift */; };
-		4B0CD8652656536700F2E05A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CD8642656536700F2E05A /* Task.swift */; };
-		4B0CD86E2656543000F2E05A /* GifsFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CD86A2656543000F2E05A /* GifsFeedView.swift */; };
+		4B0CD8652656536700F2E05A /* TestTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CD8642656536700F2E05A /* TestTask.swift */; };
+		4B0CD86E2656543000F2E05A /* TasksFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CD86A2656543000F2E05A /* TasksFeedView.swift */; };
 		4B0CD872265657A400F2E05A /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CD871265657A400F2E05A /* TaskViewModel.swift */; };
+		4B0CD87926568E3500F2E05A /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CD87826568E3500F2E05A /* StorageService.swift */; };
+		4B0CD87C2656BB5100F2E05A /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 4B0CD87B2656BB5100F2E05A /* Reachability */; };
+		4B0CD87F2656BC2A00F2E05A /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CD87E2656BC2A00F2E05A /* NetworkHelper.swift */; };
+		4B0CD8812656C18800F2E05A /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0CD8802656C18800F2E05A /* TaskDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,14 +27,16 @@
 		4B0CD8422656486D00F2E05A /* OfflineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineApp.swift; sourceTree = "<group>"; };
 		4B0CD8462656486F00F2E05A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B0CD8492656486F00F2E05A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4B0CD84B2656486F00F2E05A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		4B0CD84E2656486F00F2E05A /* Offline.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Offline.xcdatamodel; sourceTree = "<group>"; };
 		4B0CD8502656486F00F2E05A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B0CD85B26564C6900F2E05A /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		4B0CD85D265650DA00F2E05A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		4B0CD8642656536700F2E05A /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		4B0CD86A2656543000F2E05A /* GifsFeedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifsFeedView.swift; sourceTree = "<group>"; };
+		4B0CD8642656536700F2E05A /* TestTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTask.swift; sourceTree = "<group>"; };
+		4B0CD86A2656543000F2E05A /* TasksFeedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksFeedView.swift; sourceTree = "<group>"; };
 		4B0CD871265657A400F2E05A /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		4B0CD87826568E3500F2E05A /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		4B0CD87E2656BC2A00F2E05A /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		4B0CD8802656C18800F2E05A /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B0CD87C2656BB5100F2E05A /* Reachability in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +76,7 @@
 				4B0CD870265656BF00F2E05A /* ViewModel */,
 				4B0CD85A26564C3F00F2E05A /* Services */,
 				4B0CD8592656491000F2E05A /* Storage */,
-				4B0CD87726566EAB00F2E05A /* Extensions */,
+				4B0CD87D2656BC1700F2E05A /* Helpers */,
 				4B0CD857265648AA00F2E05A /* Recources */,
 				4B0CD8482656486F00F2E05A /* Preview Content */,
 			);
@@ -105,7 +111,8 @@
 		4B0CD858265648F700F2E05A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4B0CD86A2656543000F2E05A /* GifsFeedView.swift */,
+				4B0CD86A2656543000F2E05A /* TasksFeedView.swift */,
+				4B0CD8802656C18800F2E05A /* TaskDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,7 +120,6 @@
 		4B0CD8592656491000F2E05A /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				4B0CD84B2656486F00F2E05A /* Persistence.swift */,
 				4B0CD84D2656486F00F2E05A /* Offline.xcdatamodeld */,
 			);
 			path = Storage;
@@ -124,6 +130,7 @@
 			children = (
 				4B0CD85B26564C6900F2E05A /* ServiceLocator.swift */,
 				4B0CD85D265650DA00F2E05A /* NetworkService.swift */,
+				4B0CD87826568E3500F2E05A /* StorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -131,7 +138,7 @@
 		4B0CD8632656533E00F2E05A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4B0CD8642656536700F2E05A /* Task.swift */,
+				4B0CD8642656536700F2E05A /* TestTask.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,11 +151,12 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		4B0CD87726566EAB00F2E05A /* Extensions */ = {
+		4B0CD87D2656BC1700F2E05A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				4B0CD87E2656BC2A00F2E05A /* NetworkHelper.swift */,
 			);
-			path = Extensions;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +175,9 @@
 			dependencies = (
 			);
 			name = Offline;
+			packageProductDependencies = (
+				4B0CD87B2656BB5100F2E05A /* Reachability */,
+			);
 			productName = Offline;
 			productReference = 4B0CD83F2656486D00F2E05A /* Offline.app */;
 			productType = "com.apple.product-type.application";
@@ -194,6 +205,9 @@
 				Base,
 			);
 			mainGroup = 4B0CD8362656486D00F2E05A;
+			packageReferences = (
+				4B0CD87A2656BB5100F2E05A /* XCRemoteSwiftPackageReference "Reachability" */,
+			);
 			productRefGroup = 4B0CD8402656486D00F2E05A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -220,14 +234,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B0CD84C2656486F00F2E05A /* Persistence.swift in Sources */,
 				4B0CD872265657A400F2E05A /* TaskViewModel.swift in Sources */,
+				4B0CD87F2656BC2A00F2E05A /* NetworkHelper.swift in Sources */,
+				4B0CD8812656C18800F2E05A /* TaskDetailView.swift in Sources */,
 				4B0CD85C26564C6900F2E05A /* ServiceLocator.swift in Sources */,
-				4B0CD8652656536700F2E05A /* Task.swift in Sources */,
+				4B0CD8652656536700F2E05A /* TestTask.swift in Sources */,
 				4B0CD8432656486D00F2E05A /* OfflineApp.swift in Sources */,
 				4B0CD85E265650DA00F2E05A /* NetworkService.swift in Sources */,
 				4B0CD84F2656486F00F2E05A /* Offline.xcdatamodeld in Sources */,
-				4B0CD86E2656543000F2E05A /* GifsFeedView.swift in Sources */,
+				4B0CD87926568E3500F2E05A /* StorageService.swift in Sources */,
+				4B0CD86E2656543000F2E05A /* TasksFeedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +432,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4B0CD87A2656BB5100F2E05A /* XCRemoteSwiftPackageReference "Reachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4B0CD87B2656BB5100F2E05A /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B0CD87A2656BB5100F2E05A /* XCRemoteSwiftPackageReference "Reachability" */;
+			productName = Reachability;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		4B0CD84D2656486F00F2E05A /* Offline.xcdatamodeld */ = {

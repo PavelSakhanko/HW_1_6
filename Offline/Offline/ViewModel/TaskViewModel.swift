@@ -6,42 +6,69 @@
 //
 
 import Foundation
+import CoreData
 
 class TaskViewModel: ObservableObject {
 
-    @Published var taskFeedItems = [Task]()
+    @Published var taskFeedItems = [TestTask]()
     @Published var networkService: NetworkService?
-    private let locator: ServiceLocator
+    @Published var storageService: StorageService?
+
+    let locator: ServiceLocator
 
     init(locator: ServiceLocator) {
       self.locator = locator
-      self.networkService = getService()
-      loadGifs()
-    }
-  
-    func getService() -> NetworkService? {
-        guard let service: NetworkService = locator.resolve() else { return nil }
-        return service
+      self.networkService = getNetworkService()
+      self.storageService = getStorageService()
+
+      selectDataSource()
     }
 
-    func loadGifs(currentItem: Task? = nil) {
-        networkService?.startDataTask(
-          completionHandler: parseGifsFromResponse(data:response:error:)
-        )
+    func selectDataSource() {
+      switch NetworkHelper().connection() {
+      case .wifi, .cellular:
+        loadTasksFromNetwork()
+      case .unavailable, .none:
+        loadTasksFromDB()
+      }
     }
 
-    private func parseGifsFromResponse(data: Data?, response: URLResponse?, error: Error?) {
-        guard error == nil,
-              let data = data,
-              let tasks = networkService?.parseFromData(data: data)
-        else {
-            return
-        }
+    func getNetworkService() -> NetworkService? {
+      guard let service: NetworkService = locator.resolve() else { return nil }
+      return service
+    }
 
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
-            self.taskFeedItems = []
-            self.taskFeedItems.append(contentsOf: tasks)
-        }
+    func getStorageService() -> StorageService? {
+      guard let service: StorageService = locator.resolve() else { return nil }
+      return service
+    }
+
+    func loadTasksFromDB() {
+      let tasksFromDBArray = try? storageService?.read()
+      addTasksInTaskFeedItems(tasks: tasksFromDBArray ?? [TestTask]())
+    }
+
+    func loadTasksFromNetwork(currentItem: TestTask? = nil) {
+      networkService?.startDataTask(
+        completionHandler: parseFromResponse(data:response:error:)
+      )
+    }
+
+    private func parseFromResponse(data: Data?, response: URLResponse?, error: Error?) {
+      guard error == nil,
+            let data = data,
+            let tasks = networkService?.parseFromData(data: data)
+      else {
+          return
+      }
+
+      addTasksInTaskFeedItems(tasks: tasks)
+    }
+
+    private func addTasksInTaskFeedItems(tasks: [TestTask]) {
+      DispatchQueue.main.async {
+        self.taskFeedItems = []
+        self.taskFeedItems.append(contentsOf: tasks)
+      }
     }
 }
